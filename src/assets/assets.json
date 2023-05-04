@@ -1,6 +1,15 @@
 {
   "packages": [
     {
+      "package": "vant",
+      "version": "4.2.0",
+      "urls": [
+        "https://unpkg.com/vant@4.2.0/lib/index.css",
+        "https://unpkg.com/vant@4.2.0/lib/vant.min.js"
+      ],
+      "library": "vant"
+    },
+    {
       "package": "naive-ui",
       "version": "2.32.0",
       "urls": ["https://unpkg.com/naive-ui@2.32.0/dist/index.prod.js"],
