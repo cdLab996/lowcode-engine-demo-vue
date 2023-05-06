@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "build-scripts start --disable-reload --port 5557",
+    "start": "build-scripts start --disable-reload --port 5577",
     "build": "build-scripts build"
   },
   "dependencies": {

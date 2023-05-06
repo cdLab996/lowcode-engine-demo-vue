@@ -6,7 +6,7 @@
       "componentName": "van-button",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Button",
         "destructuring": true
       },
@@ -114,7 +114,7 @@
       "componentName": "van-cell-group",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "CellGroup",
         "destructuring": true
       },
@@ -145,7 +145,7 @@
       "componentName": "van-cell",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Cell",
         "destructuring": true
       },
@@ -293,7 +293,7 @@
       "componentName": "van-icon",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Icon",
         "destructuring": true
       },
@@ -340,7 +340,7 @@
       "componentName": "van-image",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Image",
         "destructuring": true
       },
@@ -433,7 +433,7 @@
       "componentName": "van-radio-group",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "RadioGroup",
         "destructuring": true
       },
@@ -480,7 +480,7 @@
       "componentName": "van-radio",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Radio",
         "destructuring": true
       },
@@ -545,7 +545,7 @@
       "componentName": "van-switch",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Switch",
         "destructuring": true
       },
@@ -614,7 +614,7 @@
       "componentName": "van-stepper",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Stepper",
         "destructuring": true
       },
@@ -780,7 +780,7 @@
       "componentName": "van-field",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Field",
         "destructuring": true
       },
@@ -1029,7 +1029,7 @@
       "componentName": "van-picker",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Picker",
         "destructuring": true
       },
@@ -1149,7 +1149,7 @@
       "componentName": "van-calendar",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Calendar",
         "destructuring": true
       },
@@ -1172,7 +1172,7 @@
       "componentName": "van-loading",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Loading",
         "destructuring": true
       },
@@ -1239,7 +1239,7 @@
       "componentName": "van-grid",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Grid",
         "destructuring": true
       },
@@ -1308,7 +1308,7 @@
       "componentName": "van-grid-item",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "GridItem",
         "destructuring": true
       },
@@ -1379,7 +1379,7 @@
       "componentName": "van-tabs",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Tabs",
         "destructuring": true
       },
@@ -1662,7 +1662,7 @@
       "componentName": "van-tab",
       "npm": {
         "package": "vant",
-        "version": "2.12.53",
+        "version": "4.2.0",
         "exportName": "Tab",
         "destructuring": true
       },
