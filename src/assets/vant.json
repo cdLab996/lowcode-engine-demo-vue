@@ -127,8 +127,7 @@
         {
           "name": "border",
           "description": "是否显示外边框",
-          "propType": "bool",
-          "defaultValue": true
+          "propType": "bool"
         }
       ],
       "configure": {
@@ -176,7 +175,7 @@
           "description": "单元格大小",
           "propType": {
             "type": "oneOf",
-            "value": ["large"]
+            "value": ["none", "large"]
           }
         },
         {
@@ -1772,13 +1771,11 @@
               "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_radio.png",
               "schema": {
                 "componentName": "van-cell-group",
+                "props": {
+                  "title": "单元格组",
+                  "border": true
+                },
                 "children": [
-                  {
-                    "componentName": "van-cell",
-                    "props": {
-                      "border": true
-                    }
-                  },
                   {
                     "componentName": "van-cell",
                     "props": {
@@ -1840,29 +1837,6 @@
       "title": "Vant组件",
       "children": [
         {
-          "componentName": "van-icon",
-          "library": "vant",
-          "title": "图标",
-          "snippets": [
-            {
-              "title": "图标",
-              "screenshot": "https://img.alicdn.com/imgextra/i1/O1CN01yR8vcY1M504YbHxzo_!!6000000001382-55-tps-56-56.svg",
-              "schema": {
-                "componentName": "van-icon",
-                "props": {
-                  "children": "图标",
-                  "type": "smile"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Vant组件",
-      "children": [
-        {
           "componentName": "van-image",
           "library": "vant",
           "title": "Image 图片",
@@ -1873,7 +1847,6 @@
               "schema": {
                 "componentName": "van-image",
                 "props": {
-                  "children": "图片",
                   "src": "https://img01.yzcdn.cn/vant/cat.jpeg",
                   "fit": "fill",
                   "radius": 0,
