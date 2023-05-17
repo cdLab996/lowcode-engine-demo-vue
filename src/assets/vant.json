@@ -1888,6 +1888,91 @@
     },
     {
       "category": "Vant组件",
+      "componentName": "van-list",
+      "npm": {
+        "package": "vant",
+        "version": "2.12.53",
+        "exportName": "List",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "v-model:loading",
+          "description": "是否处于加载状态，加载过程中不触发load事件",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "finished",
+          "description": "是否已加载完成，加载完成后不再触发load事件",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "error",
+          "description": "是否加载失败，加载失败后点击错误提示可以重新触发load事件，必须使用sync修饰符",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "offset",
+          "description": "滚动条与底部距离小于 offset 时触发load事件",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "number"]
+          },
+          "defaultValue": 300
+        },
+        {
+          "name": "loading-text",
+          "description": "加载过程中的提示文案",
+          "propType": "string",
+          "defaultValue": "加载中..."
+        },
+        {
+          "name": "finished-text",
+          "description": "加载完成后的提示文案",
+          "propType": "string"
+        },
+        {
+          "name": "error-text",
+          "description": "加载失败后的提示文案",
+          "propType": "string"
+        },
+        {
+          "name": "immediate-check",
+          "description": "是否在初始化时立即执行滚动位置检查",
+          "propType": "bool",
+          "defaultValue": true
+        },
+        {
+          "name": "direction",
+          "description": "滚动触发加载的方向",
+          "propType": {
+            "type": "oneOf",
+            "value": ["down", "up"]
+          },
+          "defaultValue": "down"
+        }
+      ],
+      "configure": {
+        "supports": {
+          "style": true
+        },
+        "props": {
+          "isExtends": true,
+          "override": [
+            {
+              "name": "images",
+              "title": "需要预览的图片 URL 数组",
+              "setter": "JsonSetter"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category": "Vant组件",
       "componentName": "van-grid",
       "npm": {
         "package": "vant",
@@ -2500,7 +2585,6 @@
               "schema": {
                 "componentName": "van-image",
                 "props": {
-                  "children": "图片",
                   "src": "https://img01.yzcdn.cn/vant/cat.jpeg",
                   "fit": "fill",
                   "radius": 0,
@@ -2954,6 +3038,35 @@
                   "close-icon": "clear",
                   "close-icon-position": "top-right",
                   "transition": "van-fade"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vant组件",
+      "children": [
+        {
+          "componentName": "van-list",
+          "library": "vant",
+          "title": "列表",
+          "snippets": [
+            {
+              "title": "列表",
+              "screenshot": "https://alifd.alicdn.com/fusion-cool/icons/icon-antd/list-1.png",
+              "schema": {
+                "componentName": "van-list",
+                "props": {
+                  "v-model:loading": true,
+                  "finished": false,
+                  "error": false,
+                  "offset": 300,
+                  "loading-text": "加载中...",
+                  "finished-text": "没有更多了",
+                  "immediate-check": true,
+                  "direction": "down"
                 }
               }
             }

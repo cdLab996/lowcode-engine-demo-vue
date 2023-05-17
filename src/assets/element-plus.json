@@ -1,0 +1,104 @@
+{
+  "version": "2.3.4",
+  "components": [
+    {
+      "category": "Element组件",
+      "componentName": "ElButton",
+      "npm": {
+        "package": "element-plus",
+        "version": "2.3.4",
+        "exportName": "ElButton",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "children",
+          "description": "文本内容",
+          "propType": "string"
+        },
+        {
+          "name": "size",
+          "description": "尺寸",
+          "propType": {
+            "type": "oneOf",
+            "value": ["medium", "small", "mini"]
+          }
+        },
+        {
+          "name": "type",
+          "description": "类型",
+          "propType": {
+            "type": "oneOf",
+            "value": ["primary", "success", "warning", "danger", "info", "info"]
+          }
+        },
+        {
+          "name": "icon",
+          "description": "图标类名",
+          "propType": "string"
+        },
+        {
+          "name": "plain",
+          "description": "是否朴素按钮",
+          "propType": "bool"
+        },
+        {
+          "name": "round",
+          "description": "是否圆角按钮",
+          "propType": "bool"
+        },
+        {
+          "name": "circle",
+          "description": "是否圆形按钮",
+          "propType": "bool"
+        },
+        {
+          "name": "loading",
+          "description": "是否加载中状态",
+          "propType": "bool"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用状态",
+          "propType": "bool"
+        },
+        {
+          "name": "autofocus",
+          "description": "是否默认聚焦",
+          "propType": "bool"
+        }
+      ],
+      "configure": {
+        "supports": {
+          "style": true,
+          "loop": true,
+          "events": ["onClick"]
+        }
+      }
+    }
+  ],
+  "componentList": [
+    {
+      "title": "Element组件",
+      "children": [
+        {
+          "componentName": "ElButton",
+          "library": "ElementPlus",
+          "title": "按钮",
+          "snippets": [
+            {
+              "title": "按钮",
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png",
+              "schema": {
+                "componentName": "ElButton",
+                "props": {
+                  "children": "按钮"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
