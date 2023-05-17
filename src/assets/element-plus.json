@@ -75,6 +75,221 @@
           "events": ["onClick"]
         }
       }
+    },
+    {
+      "category": "Element组件",
+      "title": "级联选择器",
+      "componentName": "ElCascader",
+      "npm": {
+        "package": "element-plus",
+        "version": "2.3.4",
+        "exportName": "ElCascader",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "v-model",
+          "description": "选中项绑定值",
+          "propType": {
+            "type": "arrayOf",
+            "value": "object"
+          }
+        },
+        {
+          "name": "ref",
+          "description": "组件的ref",
+          "propType": "string"
+        },
+        {
+          "name": "options",
+          "description": "可选项数据源，键名可通过 Props 属性配置",
+          "propType": {
+            "type": "arrayOf",
+            "value": "object"
+          }
+        },
+        {
+          "name": "size",
+          "description": "尺寸",
+          "propType": {
+            "type": "oneOf",
+            "value": ["medium", "small", "mini"]
+          }
+        },
+        {
+          "name": "placeholder",
+          "description": "输入框占位文本",
+          "propType": "string",
+          "defaultValue": "请选择"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "clearable",
+          "description": "是否支持清空选项",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "show-all-levels",
+          "description": "输入框中是否显示选中值的完整路径",
+          "propType": "bool",
+          "defaultValue": true
+        },
+        {
+          "name": "collapse-tags",
+          "description": "多选模式下是否折叠Tag",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "separator",
+          "description": "选项分隔符",
+          "propType": "string",
+          "defaultValue": "/"
+        },
+        {
+          "name": "filterable",
+          "description": "是否可搜索选项",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "filter-method",
+          "title": {
+            "label": "自定义搜索逻辑",
+            "tip": "第一个参数是节点node，第二个参数是搜索关键词keyword，通过返回布尔值表示是否命中"
+          },
+          "propType": "func"
+        },
+        {
+          "name": "debounce",
+          "description": "debounce",
+          "propType": "number"
+        },
+        {
+          "name": "before-filter",
+          "title": {
+            "label": "筛选之前的钩子",
+            "tip": "参数为输入的值，若返回 false 或者返回 Promise 且被 reject，则停止筛选"
+          },
+          "propType": "func"
+        },
+        {
+          "name": "popper-class",
+          "description": "自定义浮层类名",
+          "propType": "string",
+          "defaultValue": ""
+        }
+      ],
+      "configure": {
+        "supports": {
+          "style": true
+        },
+        "props": [
+          {
+            "name": "v-model",
+            "setter": "JsonSetter"
+          },
+          {
+            "name": "options",
+            "setter": "JsonSetter"
+          },
+          {
+            "display": "accordion",
+            "name": "props",
+            "title": "数据源 Props 属性配置",
+            "setter": {
+              "componentName": "ObjectSetter",
+              "props": {
+                "config": {
+                  "items": [
+                    {
+                      "name": "expandTrigger",
+                      "title": "次级菜单的展开方式",
+                      "setter": {
+                        "componentName": "RadioGroupSetter",
+                        "props": {
+                          "options": [
+                            {
+                              "title": "click",
+                              "value": "click"
+                            },
+                            {
+                              "title": "hover",
+                              "value": "hover"
+                            }
+                          ]
+                        },
+                        "defaultValue": "click"
+                      }
+                    },
+                    {
+                      "name": "multiple",
+                      "title": "是否多选",
+                      "setter": "BoolSetter"
+                    },
+                    {
+                      "name": "checkStrictly",
+                      "title": "是否严格的遵守父子节点不互相关联",
+                      "setter": "BoolSetter"
+                    },
+                    {
+                      "name": "emitPath",
+                      "title": "在选中节点改变时，是否返回由该节点所在的各级菜单的值所组成的数组，若设置 false，则只返回该节点的值",
+                      "setter": "BoolSetter"
+                    },
+                    {
+                      "name": "lazy",
+                      "title": "是否动态加载子节点，需与 lazyLoad 方法结合使用",
+                      "setter": "BoolSetter"
+                    },
+                    {
+                      "name": "lazyLoad",
+                      "title": "加载动态数据的方法，仅在 lazy 为 true 时有效",
+                      "setter": "FunctionSetter"
+                    },
+                    {
+                      "name": "value",
+                      "title": "指定选项的值为选项对象的某个属性值",
+                      "setter": "StringSetter",
+                      "defaultValue": "value"
+                    },
+                    {
+                      "name": "label",
+                      "title": "指定选项标签为选项对象的某个属性值",
+                      "setter": "StringSetter",
+                      "defaultValue": "label"
+                    },
+                    {
+                      "name": "children",
+                      "title": "指定选项的子选项为选项对象的某个属性值",
+                      "setter": "StringSetter",
+                      "defaultValue": "children"
+                    },
+                    {
+                      "name": "disabled",
+                      "title": "指定选项的禁用为选项对象的某个属性值",
+                      "setter": "StringSetter",
+                      "defaultValue": "disabled"
+                    },
+                    {
+                      "name": "leaf",
+                      "title": "指定选项的叶子节点的标志位为选项对象的某个属性值",
+                      "setter": "StringSetter",
+                      "defaultValue": "leaf"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   ],
   "componentList": [
@@ -93,6 +308,128 @@
                 "componentName": "ElButton",
                 "props": {
                   "children": "按钮"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Element组件",
+      "children": [
+        {
+          "componentName": "ElCascader",
+          "library": "ElementPlus",
+          "snippets": [
+            {
+              "screenshot": "https://alifd.alicdn.com/fusion-cool/icons/icon-antd/cascader-1.png",
+              "title": "级联选择器",
+              "schema": {
+                "componentName": "ElCascader",
+                "props": {
+                  "v-model": [],
+                  "options": [
+                    {
+                      "value": "zhinan",
+                      "label": "指南",
+                      "children": [
+                        {
+                          "value": "shejiyuanze",
+                          "label": "设计原则",
+                          "children": [
+                            {
+                              "value": "yizhi",
+                              "label": "一致"
+                            },
+                            {
+                              "value": "fankui",
+                              "label": "反馈"
+                            },
+                            {
+                              "value": "xiaolv",
+                              "label": "效率"
+                            },
+                            {
+                              "value": "kekong",
+                              "label": "可控"
+                            }
+                          ]
+                        },
+                        {
+                          "value": "daohang",
+                          "label": "导航",
+                          "children": [
+                            {
+                              "value": "cexiangdaohang",
+                              "label": "侧向导航"
+                            },
+                            {
+                              "value": "dingbudaohang",
+                              "label": "顶部导航"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "zujian",
+                      "label": "组件",
+                      "children": [
+                        {
+                          "value": "basic",
+                          "label": "Basic",
+                          "children": [
+                            {
+                              "value": "layout",
+                              "label": "Layout 布局"
+                            },
+                            {
+                              "value": "color",
+                              "label": "Color 色彩"
+                            },
+                            {
+                              "value": "typography",
+                              "label": "Typography 字体"
+                            },
+                            {
+                              "value": "icon",
+                              "label": "Icon 图标"
+                            }
+                          ]
+                        },
+                        {
+                          "value": "form",
+                          "label": "Form",
+                          "children": [
+                            {
+                              "value": "radio",
+                              "label": "Radio 单选框"
+                            },
+                            {
+                              "value": "checkbox",
+                              "label": "Checkbox 多选框"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "show-all-levels": true,
+                  "separator": "/",
+                  "props": {
+                    "expandTrigger": "hover",
+                    "multiple": false,
+                    "checkStrictly": false,
+                    "emitPath": true,
+                    "lazy": false,
+                    "lazyLoad": null,
+                    "value": "value",
+                    "label": "label",
+                    "children": "children",
+                    "disabled": "disabled",
+                    "leaf": "leaf"
+                  }
                 }
               }
             }
