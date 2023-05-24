@@ -5,6 +5,7 @@ import SchemaPlugin from '@alilc/lowcode-plugin-schema';
 import DataSource from '@alilc/lowcode-plugin-datasource-pane';
 import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
 import CodeEditor from '@knxcloud/lowcode-plugin-vue-code-editor';
+import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import RegistryPlugin from './plugins/registry';
 import InitPlugin from './plugins/init';
 import SetterPlugin from './plugins/setter';
@@ -34,6 +35,7 @@ import './editor.less';
   await plugins.register(InitPlugin);
   await plugins.register(CodeEditor);
   await plugins.register(Actions);
+  await plugins.register(SetRefPropPlugin);
 
   setupHostEnvironment(project, '/js/vue.runtime.global.js');
 

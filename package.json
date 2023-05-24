@@ -8,6 +8,7 @@
     "@alilc/lowcode-plugin-datasource-pane": "^1.0.10",
     "@alilc/lowcode-plugin-inject": "^1.2.2",
     "@alilc/lowcode-plugin-schema": "^1.0.5",
+    "@alilc/lowcode-plugin-set-ref-prop": "^1.0.1",
     "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
     "@alilc/lowcode-types": "^1.1.3",
     "@knxcloud/lowcode-plugin-vue-code-editor": "0.0.1-beta.6",
