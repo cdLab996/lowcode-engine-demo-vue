@@ -15,6 +15,16 @@ import Actions from './plugins/actions';
 import '@knxcloud/lowcode-plugin-vue-code-editor/dist/style.css';
 import './editor.less';
 
+const getUrlParam = (name: string): string | null => {
+  if (!name) return null;
+
+  const searchParams = window.location.search;
+  if (!searchParams) return null;
+
+  const urlParams = new URLSearchParams(searchParams);
+  return urlParams.get(name);
+};
+
 (async () => {
   const preference = new Map();
 
@@ -27,28 +37,40 @@ import './editor.less';
     ],
   });
 
-  await plugins.register(Inject);
-  await plugins.register(RegistryPlugin);
-  await plugins.register(UndoRedoPlugin);
-  await plugins.register(SchemaPlugin);
-  await plugins.register(DataSource);
-  await plugins.register(SetterPlugin);
-  await plugins.register(InitPlugin);
-  await plugins.register(CodeEditor);
-  await plugins.register(Actions);
-  await plugins.register(SimulatorResizer);
-  await plugins.register(SetRefPropPlugin);
+  const pluginsList = [
+    Inject,
+    RegistryPlugin,
+    UndoRedoPlugin,
+    SchemaPlugin,
+    DataSource,
+    SetterPlugin,
+    InitPlugin,
+    CodeEditor,
+    Actions,
+    SimulatorResizer,
+    SetRefPropPlugin,
+  ];
 
+  for (const plugin of pluginsList) {
+    await plugins.register(plugin);
+  }
+
+  const client: string = getUrlParam('client') || 'h5';
+  const client2deviceMap: Record<string, string> = {
+    h5: 'mobile',
+    pc: 'default',
+  };
+
+  const device: string = client2deviceMap[client] || 'default';
   setupHostEnvironment(project, '/js/vue.runtime.global.js');
 
-  await init(
-    document.getElementById('lce-container')!,
-    {
-      enableCondition: true,
-      enableCanvasLock: true,
-      supportVariableGlobally: true,
-      simulatorUrl: ['/js/vue-simulator-renderer.js', '/js/vue-simulator-renderer.css'],
-    },
-    preference
-  );
+  const options = {
+    enableCondition: true,
+    enableCanvasLock: true,
+    supportVariableGlobally: true,
+    device,
+    simulatorUrl: ['/js/vue-simulator-renderer.js', '/js/vue-simulator-renderer.css'],
+  };
+
+  await init(document.getElementById('lce-container')!, options, preference);
 })();
