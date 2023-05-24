@@ -1,6 +1,6 @@
 # lowcode-engine-demo-vue
 
-This is the Lowcode Engine Vue demo, and you can check it out live [here](https://knxcloud.github.io/lowcode-engine-demo/).
+This is the Lowcode Engine Vue demo, and you can check it out live [here](https://lowcode-engine-demo-vue.vercel.app/).
 
 ## Running the Demo
 
