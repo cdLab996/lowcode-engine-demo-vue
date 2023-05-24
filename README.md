@@ -1,29 +1,32 @@
-# lowcode-engine-demo
+# lowcode-engine-demo-vue
 
-Lowcode Engine Vue demo，[在线演示](https://knxcloud.github.io/lowcode-engine-demo/)
+This is the Lowcode Engine Vue demo, and you can check it out live [here](https://knxcloud.github.io/lowcode-engine-demo/).
 
-## 运行演示
+## Running the Demo
 
 ```bash
-git clone git@github.com:KNXCloud/lowcode-engine-demo.git
-cd lowcode-engine-demo
+git clone https://github.com/cdLab996/lowcode-engine-demo-vue.git
+cd lowcode-engine-demo-vue
 pnpm install
 pnpm start
 ```
 
-## 使用注意事项
+## Usage Considerations
 
-使用变量时：
-
+When using variables:
 - `this.props.xxx` -> `this.xxx`
 - `this.state.xxx` -> `this.xxx`
 
-现阶段 vue 代码编辑器还未适配，可以直接使用 react 代码编辑器编辑代码
-
-- state 内容会自动转化为 vue data
-- lifecycle 自动适配为 vue lifecycle
+At present, the vue code editor has not been adapted yet. You can directly edit the code using the react code editor.
+- The content within `state` will automatically convert to vue `data`.
+- Lifecycle events will automatically adapt to vue lifecycle.
   - `componentDidMount` -> `onMounted`
   - `componentDidCatch` -> `onErrorCaptured`
   - `shouldComponentUpdate` -> `onBeforeUpdate`
   - `componentWillUnmount` -> `onBeforeUnmount`
-- 其余方法自动转化为 vue methods
+- All other methods will automatically convert to vue `methods`.
+
+## License
+
+This is a fork
+from [lowcode-engine-demo](https://github.com/KNXCloud/lowcode-engine-demo)
