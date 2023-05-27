@@ -6,7 +6,7 @@
   "externals": {
     "@alifd/next": "var window.Next",
     "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
-    "@alilc/lowcode-engine-ext": "var window.AliLowCodeEngineExt",
+    "@cdlab996/lowcode-engine-ext-vue": "var window.AliLowCodeEngineExt",
     "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
     "@alilc/lowcode-designer": "var window.AliLowCodeEngine.common.designerCabin",
     "@alilc/lowcode-editor-skeleton": "var window.AliLowCodeEngine.common.skeletonCabin",
