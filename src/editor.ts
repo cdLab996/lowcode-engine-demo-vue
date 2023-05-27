@@ -37,6 +37,11 @@ const getUrlParam = (name: string): string | null => {
     ],
   });
 
+  /**
+   * More official plugins can be found here
+   *
+   * https://github.com/alibaba/lowcode-plugins
+   */
   const pluginsList = [
     Inject,
     RegistryPlugin,

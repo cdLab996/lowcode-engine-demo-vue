@@ -1,5 +1,5 @@
 import { isJSExpression } from '@knxcloud/lowcode-utils';
-import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
+import AliLowCodeEngineExt from '@cdlab996/lowcode-engine-ext-vue';
 import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import { project } from '@alilc/lowcode-engine';
 
