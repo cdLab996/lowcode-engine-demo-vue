@@ -1,6 +1,9 @@
-# lowcode-engine-demo-vue
+# Lowcode Engine Vue Demo
 
-This is the Lowcode Engine Vue demo, and you can check it out live [here](https://lowcode-engine-demo-vue.vercel.app/).
+This is a Lowcode Engine demo based on Vue. You can experience the following versions online:
+
+- Vue 3: [https://lowcode-engine-demo-vue.vercel.app/](https://lowcode-engine-demo-vue.vercel.app/)
+- Vue 2.7: [https://lowcode-engine-demo-vue2-7.vercel.app/](https://lowcode-engine-demo-vue2-7.vercel.app/)
 
 ## Running the Demo
 
