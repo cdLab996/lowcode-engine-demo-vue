@@ -11,8 +11,6 @@ import RegistryPlugin from './plugins/registry';
 import InitPlugin from './plugins/init';
 import SetterPlugin from './plugins/setter';
 import Actions from './plugins/actions';
-
-import '@knxcloud/lowcode-plugin-vue-code-editor/dist/style.css';
 import './editor.less';
 
 const getUrlParam = (name: string): string | null => {
