@@ -29,7 +29,15 @@
           "description": "类型",
           "propType": {
             "type": "oneOf",
-            "value": ["primary", "success", "warning", "danger", "info", "info"]
+            "value": [
+              "default",
+              "primary",
+              "success",
+              "warning",
+              "danger",
+              "info",
+              "info"
+            ]
           }
         },
         {

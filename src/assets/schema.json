@@ -2,20 +2,12 @@
   "componentName": "Page",
   "id": "node_dockcviv8fo1",
   "props": {},
+  "docId": "docljr822nm",
   "fileName": "/",
   "state": {
-    "text": {
-      "type": "JSExpression",
-      "value": "\"outer\""
-    },
-    "isShowDialog": {
-      "type": "JSExpression",
-      "value": "false"
-    },
-    "info": {
-      "type": "JSExpression",
-      "value": "{\n  \"info\": \"\",\n  \"user\": {\n    \"username\": \"\",\n    \"password\": \"\"\n  }\n}"
-    }
+    "text": "outer",
+    "isShowDialog": false,
+    "info": { "info": "", "user": { "username": "", "password": "" } }
   },
   "dataSource": {
     "list": [
@@ -41,19 +33,13 @@
               "type": "JSExpression",
               "value": "this.info.user.username"
             },
-            "password": {
-              "type": "JSExpression",
-              "value": "this.info.user.password"
-            }
+            "password": { "type": "JSExpression", "value": "this.info.user.password" }
           },
           "method": "POST",
           "isCors": true,
           "timeout": 5000,
           "headers": {
-            "Auth": {
-              "type": "JSExpression",
-              "value": "this.text"
-            },
+            "Auth": { "type": "JSExpression", "value": "this.text" },
             "Content-Type": "application/json"
           },
           "uri": "/api/user/login"
@@ -64,19 +50,31 @@
   },
   "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
   "lifeCycles": {
+    "initModule": {
+      "type": "JSExpression",
+      "value": "(() => {const $id = \"node_dockcviv8fo1\"; return ($cached, $scope = window) => {\n  if ($id in $cached) return $cached[$id];\n  const exports = $cached[$id] = {};\n  const {defineComponent} = $scope[\"Vue\"];\nconst {ElMessage} = $scope[\"ElementPlus\"];\n  exports.defineComponent = defineComponent;\n  exports.ElMessage = ElMessage;\n  return exports;\n}})()"
+    },
     "mounted": {
       "type": "JSFunction",
-      "value": "function mounted() {\n  console.log('did mount');\n}"
+      "value": "function () {\n    console.log('did mount');\n  }"
     },
     "beforeMount": {
       "type": "JSFunction",
-      "value": "function beforeMount() {\n  console.log('will unmount');\n}"
+      "value": "function () {\n    console.log('will unmount');\n  }"
     }
   },
   "methods": {
     "testFunc": {
       "type": "JSFunction",
-      "value": "function testFunc() {\n  console.log('test func');\n}"
+      "value": "function () {\n      console.log('test func');\n    }"
+    },
+    "handleClick": {
+      "type": "JSFunction",
+      "value": "function () {\n      ElMessage({\n        showClose: true,\n        message: 'submit',\n        type: 'success',\n      })\n    }"
+    },
+    "handleReset": {
+      "type": "JSFunction",
+      "value": "function () {\n      this.info.user = {\n        username: '',\n        password: '',\n      }\n    }"
     }
   },
   "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false,\n    \"info\": {\n      \"info\": \"\",\n      \"user\": {\n        \"username\": \"\",\n        \"password\": \"\"\n      }\n    }\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    })\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    })\n  }\n\n\tonClick_new(){\n    this.$message.success('hhhhhh')\n\t}\n\n\tonSubmit(ev){\n    ev.preventDefault();\n    this.dataSourceMap.submit.load()\n\t}\n}",
@@ -85,27 +83,23 @@
   "isLocked": false,
   "condition": true,
   "conditionGroup": "",
+  "meta": {
+    "originCode": "import { defineComponent } from 'vue';\nimport { ElMessage } from 'element-plus';\n\nexport default defineComponent({\n  data: () => ({\n    text: \"outer\",\n    isShowDialog: false,\n    info: {\n      \"info\": \"\",\n      \"user\": {\n        \"username\": \"\",\n        \"password\": \"\"\n      }\n    },\n  }),\n  methods: {\n    testFunc() {\n      console.log('test func');\n    },\n    handleClick() {\n      ElMessage({\n        showClose: true,\n        message: 'submit',\n        type: 'success',\n      })\n    },\n    handleReset() {\n      this.info.user = {\n        username: '',\n        password: '',\n      }\n    },\n  },\n  mounted() {\n    console.log('did mount');\n  },\n  beforeMount() {\n    console.log('will unmount');\n  },\n})\n"
+  },
   "children": [
     {
       "componentName": "NCard",
       "id": "node_ocl4goj8tm1",
       "props": {
-        "segmented": {
-          "content": false,
-          "footer": false,
-          "action": false
-        },
+        "segmented": { "content": false, "footer": false, "action": false },
         "header": {
           "type": "JSSlot",
           "value": [
             {
               "componentName": "NText",
               "id": "node_ocl4goj8tm3",
-              "props": {
-                "children": "用户登录",
-                "type": "default",
-                "tag": "span"
-              },
+              "props": { "children": "用户登录", "type": "default", "tag": "span" },
+              "docId": "docljr822nm",
               "hidden": false,
               "title": "",
               "isLocked": false,
@@ -113,9 +107,11 @@
               "conditionGroup": ""
             }
           ],
-          "title": "头部"
+          "title": "头部",
+          "id": "node_ocljr822nm1"
         }
       },
+      "docId": "docljr822nm",
       "hidden": false,
       "title": "",
       "isLocked": false,
@@ -138,12 +134,7 @@
                   "relatedEventName": "onSubmit"
                 }
               ],
-              "eventList": [
-                {
-                  "name": "onSubmit",
-                  "disabled": true
-                }
-              ]
+              "eventList": [{ "name": "onSubmit", "disabled": true }]
             },
             "onSubmit": {
               "type": "JSFunction",
@@ -152,12 +143,10 @@
             "model": {
               "type": "JSExpression",
               "value": "this.info.user",
-              "mock": {
-                "type": "JSExpression",
-                "value": "this.info.user"
-              }
+              "mock": { "type": "JSExpression", "value": "this.info.user" }
             }
           },
+          "docId": "docljr822nm",
           "hidden": false,
           "title": "",
           "isLocked": false,
@@ -183,6 +172,7 @@
                 },
                 "label-width": "auto"
               },
+              "docId": "docljr822nm",
               "hidden": false,
               "title": "",
               "isLocked": false,
@@ -200,6 +190,7 @@
                     },
                     "show-password-on": "click"
                   },
+                  "docId": "docljr822nm",
                   "hidden": false,
                   "title": "",
                   "isLocked": false,
@@ -226,6 +217,7 @@
                   "message": "请输入密码"
                 }
               },
+              "docId": "docljr822nm",
               "hidden": false,
               "title": "",
               "isLocked": false,
@@ -244,6 +236,7 @@
                     "type": "password",
                     "show-password-on": "click"
                   },
+                  "docId": "docljr822nm",
                   "hidden": false,
                   "title": "",
                   "isLocked": false,
@@ -255,11 +248,8 @@
             {
               "componentName": "NSpace",
               "id": "node_ocl4goj8tm4",
-              "props": {
-                "align": "start",
-                "justify": "center",
-                "size": "medium"
-              },
+              "props": { "align": "start", "justify": "center", "size": "medium" },
+              "docId": "docljr822nm",
               "hidden": false,
               "title": "",
               "isLocked": false,
@@ -267,16 +257,35 @@
               "conditionGroup": "",
               "children": [
                 {
-                  "componentName": "NButton",
-                  "id": "node_ocl4goj8tm6",
+                  "componentName": "ElButton",
+                  "id": "node_ocljr823as2",
                   "props": {
                     "children": "登录",
-                    "icon-placement": "left",
-                    "attr-type": "submit",
-                    "type": "primary",
                     "size": "medium",
-                    "bordered": true
+                    "type": "primary",
+                    "icon": "",
+                    "plain": false,
+                    "round": false,
+                    "circle": false,
+                    "loading": false,
+                    "disabled": false,
+                    "autofocus": false,
+                    "__events": {
+                      "eventDataList": [
+                        {
+                          "type": "componentEvent",
+                          "name": "onClick",
+                          "relatedEventName": "handleClick"
+                        }
+                      ],
+                      "eventList": [{ "name": "onClick", "disabled": true }]
+                    },
+                    "onClick": {
+                      "type": "JSFunction",
+                      "value": "function(){return this.handleClick.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                    }
                   },
+                  "docId": "docljr86zz5",
                   "hidden": false,
                   "title": "",
                   "isLocked": false,
@@ -284,16 +293,35 @@
                   "conditionGroup": ""
                 },
                 {
-                  "componentName": "NButton",
-                  "id": "node_ocl4goj8tm5",
+                  "componentName": "ElButton",
+                  "id": "node_ocljr823as3",
                   "props": {
                     "children": "重置",
-                    "icon-placement": "left",
-                    "attr-type": "button",
-                    "type": "default",
                     "size": "medium",
-                    "bordered": true
+                    "type": "default",
+                    "icon": "",
+                    "plain": false,
+                    "round": false,
+                    "circle": false,
+                    "loading": false,
+                    "disabled": false,
+                    "autofocus": false,
+                    "__events": {
+                      "eventDataList": [
+                        {
+                          "type": "componentEvent",
+                          "name": "onClick",
+                          "relatedEventName": "handleReset"
+                        }
+                      ],
+                      "eventList": [{ "name": "onClick", "disabled": true }]
+                    },
+                    "onClick": {
+                      "type": "JSFunction",
+                      "value": "function(){return this.handleReset.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                    }
                   },
+                  "docId": "docljr86zz5",
                   "hidden": false,
                   "title": "",
                   "isLocked": false,
