@@ -2,6 +2,7 @@ import Inject from '@alilc/lowcode-plugin-inject';
 import { init, plugins, project } from '@alilc/lowcode-engine';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
+import ManualPlugin from '@cdlab996/lowcode-plugin-manual';
 import DataSource from '@alilc/lowcode-plugin-datasource-pane';
 import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
 import SimulatorResizer from '@alilc/lowcode-plugin-simulator-select';
@@ -57,6 +58,9 @@ const getUrlParam = (name: string): string | null => {
   for (const plugin of pluginsList) {
     await plugins.register(plugin);
   }
+  await plugins.register(ManualPlugin, {
+    href: 'https://github.com/cdLab996',
+  });
 
   const client: string = getUrlParam('client') || 'h5';
   const client2deviceMap: Record<string, string> = {

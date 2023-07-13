@@ -10,10 +10,10 @@ export interface IProps {
 
 export const Logo: FC<IProps & PluginProps> = (props): ReactElement => {
   return (
-    <div className="lowcode-plugin-logo">
+    <div className='lowcode-plugin-logo'>
       <a
-        className="logo"
-        target="blank"
+        className='logo'
+        target='blank'
         href={props.href || 'https://lowcode-engine.cn'}
         style={{ backgroundImage: `url(${props.logo})` }}
       />
