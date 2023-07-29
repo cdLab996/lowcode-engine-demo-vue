@@ -3,6 +3,7 @@ import { init, plugins, project } from '@alilc/lowcode-engine';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
 import ManualPlugin from '@cdlab996/lowcode-plugin-manual';
+import DirectiveLoading from '@cdlab996/plugin-directive-loading';
 import DataSource from '@alilc/lowcode-plugin-datasource-pane';
 import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
 import SimulatorResizer from '@alilc/lowcode-plugin-simulator-select';
@@ -53,6 +54,7 @@ const getUrlParam = (name: string): string | null => {
     Actions,
     SimulatorResizer,
     SetRefPropPlugin,
+    DirectiveLoading,
   ];
 
   for (const plugin of pluginsList) {

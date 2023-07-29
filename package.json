@@ -14,6 +14,7 @@
     "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
     "@alilc/lowcode-types": "^1.1.7",
     "@cdlab996/lowcode-plugin-manual": "^1.0.2",
+    "@cdlab996/plugin-directive-loading": "^1.0.0",
     "@knxcloud/lowcode-plugin-vue-code-editor": "0.0.1",
     "@knxcloud/lowcode-utils": "^1.6.0-beta.6",
     "@knxcloud/lowcode-vue-renderer": "^1.6.0-beta.9",

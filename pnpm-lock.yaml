@@ -14,6 +14,7 @@ specifiers:
   '@babel/core': ^7.21.0
   '@cdlab996/lowcode-engine-ext-vue': ^1.0.6-beta.26.7
   '@cdlab996/lowcode-plugin-manual': ^1.0.2
+  '@cdlab996/plugin-directive-loading': ^1.0.0
   '@cdlab996/prettier-config': ^0.0.1
   '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1
   '@knxcloud/lowcode-utils': ^1.6.0-beta.6
@@ -58,6 +59,7 @@ dependencies:
   '@alilc/lowcode-plugin-undo-redo': 1.0.0
   '@alilc/lowcode-types': 1.1.7
   '@cdlab996/lowcode-plugin-manual': 1.0.2
+  '@cdlab996/plugin-directive-loading': 1.0.0
   '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1_efx5gj36jllg4wcfltedxkwuny
   '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
   '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny
@@ -3453,6 +3455,13 @@ packages:
 
   /@cdlab996/lowcode-plugin-manual/1.0.2:
     resolution: {integrity: sha512-0JGr9H7gyNHJi2V4YI9DRfcq8jsahI1Z5vCgf1Cv6z+oeFfJDwXlmVEzo5CR7FHcZXrJce/4muY9ylP3/IK2Tg==}
+    peerDependencies:
+      '@alifd/next': '*'
+      react: '>=16'
+    dev: false
+
+  /@cdlab996/plugin-directive-loading/1.0.0:
+    resolution: {integrity: sha512-C75dbqmwvtG++P/Aj6E4uUYaJTwNHWCyK3CiaKj9MJ6mS19dpUkd+I/LHTbEostW0Ti0rzNBl7OYU5vDmAaXgw==}
     peerDependencies:
       '@alifd/next': '*'
       react: '>=16'
