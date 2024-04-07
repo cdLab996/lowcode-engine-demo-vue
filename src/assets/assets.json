@@ -14,8 +14,8 @@
       "version": "2.3.4",
       "client": "pc",
       "urls": [
-        "https://unpkg.com/element-plus@2.3.4/dist/index.css",
-        "https://unpkg.com/element-plus@2.3.4/dist/index.full.min.js"
+        "https://unpkg.com/element-plus@2.6.0/dist/index.css",
+        "https://unpkg.com/element-plus@2.6.0/dist/index.full.min.js"
       ],
       "library": "ElementPlus"
     },
