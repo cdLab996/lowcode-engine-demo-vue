@@ -2,81 +2,16 @@
   "componentName": "Page",
   "id": "node_dockcviv8fo1",
   "props": {},
-  "docId": "docljr822nm",
+  "docId": "doclupc274w",
   "fileName": "/",
-  "state": {
-    "text": "outer",
-    "isShowDialog": false,
-    "info": { "info": "", "user": { "username": "", "password": "" } }
-  },
-  "dataSource": {
-    "list": [
-      {
-        "type": "fetch",
-        "isInit": true,
-        "options": {
-          "params": {},
-          "method": "GET",
-          "isCors": true,
-          "timeout": 5000,
-          "headers": {},
-          "uri": "mock/info.json"
-        },
-        "id": "info"
-      },
-      {
-        "type": "fetch",
-        "isInit": false,
-        "options": {
-          "params": {
-            "username": {
-              "type": "JSExpression",
-              "value": "this.info.user.username"
-            },
-            "password": { "type": "JSExpression", "value": "this.info.user.password" }
-          },
-          "method": "POST",
-          "isCors": true,
-          "timeout": 5000,
-          "headers": {
-            "Auth": { "type": "JSExpression", "value": "this.text" },
-            "Content-Type": "application/json"
-          },
-          "uri": "/api/user/login"
-        },
-        "id": "submit"
-      }
-    ]
-  },
+  "state": { "text": "outer", "isShowDialog": false, "info": { "info": "", "user": { "username": "", "password": "" } } },
+  "dataSource": { "list": [] },
   "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
   "lifeCycles": {
-    "initModule": {
-      "type": "JSExpression",
-      "value": "(() => {const $id = \"node_dockcviv8fo1\"; return ($cached, $scope = window) => {\n  if ($id in $cached) return $cached[$id];\n  const exports = $cached[$id] = {};\n  const {defineComponent} = $scope[\"Vue\"];\nconst {ElMessage} = $scope[\"ElementPlus\"];\n  exports.defineComponent = defineComponent;\n  exports.ElMessage = ElMessage;\n  return exports;\n}})()"
-    },
-    "mounted": {
-      "type": "JSFunction",
-      "value": "function () {\n    console.log('did mount');\n  }"
-    },
-    "beforeMount": {
-      "type": "JSFunction",
-      "value": "function () {\n    console.log('will unmount');\n  }"
-    }
+    "mounted": { "type": "JSFunction", "value": "function () {\n    console.log('did mount');\n  }" },
+    "beforeMount": { "type": "JSFunction", "value": "function () {\n    console.log('will unmount');\n  }" }
   },
-  "methods": {
-    "testFunc": {
-      "type": "JSFunction",
-      "value": "function () {\n      console.log('test func');\n    }"
-    },
-    "handleClick": {
-      "type": "JSFunction",
-      "value": "function () {\n      ElMessage({\n        showClose: true,\n        message: 'submit',\n        type: 'success',\n      })\n    }"
-    },
-    "handleReset": {
-      "type": "JSFunction",
-      "value": "function () {\n      this.info.user = {\n        username: '',\n        password: '',\n      }\n    }"
-    }
-  },
+  "methods": { "testFunc": { "type": "JSFunction", "value": "function () {\n      console.log('test func');\n    }" } },
   "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false,\n    \"info\": {\n      \"info\": \"\",\n      \"user\": {\n        \"username\": \"\",\n        \"password\": \"\"\n      }\n    }\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    })\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    })\n  }\n\n\tonClick_new(){\n    this.$message.success('hhhhhh')\n\t}\n\n\tonSubmit(ev){\n    ev.preventDefault();\n    this.dataSourceMap.submit.load()\n\t}\n}",
   "hidden": false,
   "title": "",
@@ -84,34 +19,32 @@
   "condition": true,
   "conditionGroup": "",
   "meta": {
-    "originCode": "import { defineComponent } from 'vue';\nimport { ElMessage } from 'element-plus';\n\nexport default defineComponent({\n  data: () => ({\n    text: \"outer\",\n    isShowDialog: false,\n    info: {\n      \"info\": \"\",\n      \"user\": {\n        \"username\": \"\",\n        \"password\": \"\"\n      }\n    },\n  }),\n  methods: {\n    testFunc() {\n      console.log('test func');\n    },\n    handleClick() {\n      ElMessage({\n        showClose: true,\n        message: 'submit',\n        type: 'success',\n      })\n    },\n    handleReset() {\n      this.info.user = {\n        username: '',\n        password: '',\n      }\n    },\n  },\n  mounted() {\n    console.log('did mount');\n  },\n  beforeMount() {\n    console.log('will unmount');\n  },\n})\n"
+    "originCode": "import { defineComponent } from 'vue';\n\nexport default defineComponent({\n  data: () => ({\n    text: \"outer\",\n    isShowDialog: false,\n    info: {\n      \"info\": \"\",\n      \"user\": {\n        \"username\": \"\",\n        \"password\": \"\"\n      }\n    },\n  }),\n  methods: {\n    testFunc() {\n      console.log('test func');\n    },\n  },\n  mounted() {\n    console.log('did mount');\n  },\n  beforeMount() {\n    console.log('will unmount');\n  },\n})\n"
   },
   "children": [
     {
-      "componentName": "NCard",
-      "id": "node_ocl4goj8tm1",
+      "componentName": "VanTabs",
+      "id": "node_ocluqshvky1",
       "props": {
-        "segmented": { "content": false, "footer": false, "action": false },
-        "header": {
-          "type": "JSSlot",
-          "value": [
-            {
-              "componentName": "NText",
-              "id": "node_ocl4goj8tm3",
-              "props": { "children": "用户登录", "type": "default", "tag": "span" },
-              "docId": "docljr822nm",
-              "hidden": false,
-              "title": "",
-              "isLocked": false,
-              "condition": true,
-              "conditionGroup": ""
-            }
-          ],
-          "title": "头部",
-          "id": "node_ocljr822nm1"
-        }
+        "items": [
+          { "primaryKey": "2438", "title": "标签项0" },
+          { "primaryKey": "8925", "title": "标签项1" }
+        ],
+        "color": "#ee0a24",
+        "background": "#fff",
+        "duration": "0.3",
+        "line-width": "40px",
+        "line-height": "3px",
+        "animated": false,
+        "border": false,
+        "ellipsis": false,
+        "sticky": false,
+        "swipeable": false,
+        "lazy-render": true,
+        "scrollspy": false,
+        "offset-top": "0",
+        "swipe-threshold": "5"
       },
-      "docId": "docljr822nm",
       "hidden": false,
       "title": "",
       "isLocked": false,
@@ -119,34 +52,9 @@
       "conditionGroup": "",
       "children": [
         {
-          "componentName": "NForm",
-          "id": "node_ocl4gmvfwx1",
-          "props": {
-            "label-width": 80,
-            "label-align": "left",
-            "label-placement": "left",
-            "require-mark-placement": "right",
-            "__events": {
-              "eventDataList": [
-                {
-                  "type": "componentEvent",
-                  "name": "onSubmit",
-                  "relatedEventName": "onSubmit"
-                }
-              ],
-              "eventList": [{ "name": "onSubmit", "disabled": true }]
-            },
-            "onSubmit": {
-              "type": "JSFunction",
-              "value": "function(){this.onSubmit.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-            },
-            "model": {
-              "type": "JSExpression",
-              "value": "this.info.user",
-              "mock": { "type": "JSExpression", "value": "this.info.user" }
-            }
-          },
-          "docId": "docljr822nm",
+          "componentName": "VanTab",
+          "id": "node_ocluqshvky2",
+          "props": { "primaryKey": "2438", "title": "标签项0" },
           "hidden": false,
           "title": "",
           "isLocked": false,
@@ -154,181 +62,60 @@
           "conditionGroup": "",
           "children": [
             {
-              "componentName": "NFormItem",
-              "id": "node_ocl4i3antp2",
-              "props": {
-                "label": "用户名",
-                "path": "username",
-                "size": "medium",
-                "show-label": true,
-                "label-align": "left",
-                "label-placement": "left",
-                "require-mark-placement": "right",
-                "rule": {
-                  "type": "string",
-                  "required": true,
-                  "trigger": ["input", "blur"],
-                  "message": "请输入用户名"
-                },
-                "label-width": "auto"
-              },
-              "docId": "docljr822nm",
+              "componentName": "AButton",
+              "id": "node_ocluqp1per1",
+              "props": { "type": "primary", "children": "主按钮", "htmlType": "button", "size": "middle", "shape": "default", "block": false, "danger": false, "ghost": false, "disabled": false },
               "hidden": false,
               "title": "",
               "isLocked": false,
               "condition": true,
-              "conditionGroup": "",
-              "children": [
-                {
-                  "componentName": "NInput",
-                  "id": "node_ocl4i3antp3",
-                  "props": {
-                    "placeholder": "请输入用户名",
-                    "v-model:value": {
-                      "type": "JSExpression",
-                      "value": "this.info.user.username"
-                    },
-                    "show-password-on": "click"
-                  },
-                  "docId": "docljr822nm",
-                  "hidden": false,
-                  "title": "",
-                  "isLocked": false,
-                  "condition": true,
-                  "conditionGroup": ""
-                }
-              ]
+              "conditionGroup": ""
             },
             {
-              "componentName": "NFormItem",
-              "id": "node_ocl4i3antp4",
-              "props": {
-                "label": "密码",
-                "path": "password",
-                "size": "medium",
-                "show-label": true,
-                "label-align": "left",
-                "label-placement": "left",
-                "require-mark-placement": "right",
-                "rule": {
-                  "type": "string",
-                  "required": true,
-                  "trigger": ["input", "blur"],
-                  "message": "请输入密码"
-                }
-              },
-              "docId": "docljr822nm",
+              "componentName": "AButton",
+              "id": "node_ocluqp1per2",
+              "props": { "type": "default", "children": "次按钮", "htmlType": "button", "size": "middle", "shape": "default", "block": false, "danger": false, "ghost": false, "disabled": false },
               "hidden": false,
               "title": "",
               "isLocked": false,
               "condition": true,
-              "conditionGroup": "",
-              "children": [
-                {
-                  "componentName": "NInput",
-                  "id": "node_ocl4i3antp5",
-                  "props": {
-                    "placeholder": "请输入密码",
-                    "v-model:value": {
-                      "type": "JSExpression",
-                      "value": "this.info.user.password"
-                    },
-                    "type": "password",
-                    "show-password-on": "click"
-                  },
-                  "docId": "docljr822nm",
-                  "hidden": false,
-                  "title": "",
-                  "isLocked": false,
-                  "condition": true,
-                  "conditionGroup": ""
-                }
-              ]
-            },
+              "conditionGroup": ""
+            }
+          ]
+        },
+        {
+          "componentName": "VanTab",
+          "id": "node_ocluqshvky3",
+          "props": { "primaryKey": "8925", "title": "标签项1" },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
             {
-              "componentName": "NSpace",
-              "id": "node_ocl4goj8tm4",
-              "props": { "align": "start", "justify": "center", "size": "medium" },
-              "docId": "docljr822nm",
+              "componentName": "VanImage",
+              "id": "node_ocluqshvky4",
+              "props": {
+                "src": "https://img01.yzcdn.cn/vant/cat.jpeg",
+                "fit": "fill",
+                "radius": 0,
+                "round": false,
+                "lazy-load": false,
+                "show-error": true,
+                "show-loading": true,
+                "error-icon": "photo-fail",
+                "loading-icon": "photo",
+                "alt": "",
+                "width": "",
+                "height": "",
+                "icon-prefix": ""
+              },
               "hidden": false,
               "title": "",
               "isLocked": false,
               "condition": true,
-              "conditionGroup": "",
-              "children": [
-                {
-                  "componentName": "ElButton",
-                  "id": "node_ocljr823as2",
-                  "props": {
-                    "children": "登录",
-                    "size": "medium",
-                    "type": "primary",
-                    "icon": "",
-                    "plain": false,
-                    "round": false,
-                    "circle": false,
-                    "loading": false,
-                    "disabled": false,
-                    "autofocus": false,
-                    "__events": {
-                      "eventDataList": [
-                        {
-                          "type": "componentEvent",
-                          "name": "onClick",
-                          "relatedEventName": "handleClick"
-                        }
-                      ],
-                      "eventList": [{ "name": "onClick", "disabled": true }]
-                    },
-                    "onClick": {
-                      "type": "JSFunction",
-                      "value": "function(){return this.handleClick.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-                    }
-                  },
-                  "docId": "docljr86zz5",
-                  "hidden": false,
-                  "title": "",
-                  "isLocked": false,
-                  "condition": true,
-                  "conditionGroup": ""
-                },
-                {
-                  "componentName": "ElButton",
-                  "id": "node_ocljr823as3",
-                  "props": {
-                    "children": "重置",
-                    "size": "medium",
-                    "type": "default",
-                    "icon": "",
-                    "plain": false,
-                    "round": false,
-                    "circle": false,
-                    "loading": false,
-                    "disabled": false,
-                    "autofocus": false,
-                    "__events": {
-                      "eventDataList": [
-                        {
-                          "type": "componentEvent",
-                          "name": "onClick",
-                          "relatedEventName": "handleReset"
-                        }
-                      ],
-                      "eventList": [{ "name": "onClick", "disabled": true }]
-                    },
-                    "onClick": {
-                      "type": "JSFunction",
-                      "value": "function(){return this.handleReset.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
-                    }
-                  },
-                  "docId": "docljr86zz5",
-                  "hidden": false,
-                  "title": "",
-                  "isLocked": false,
-                  "condition": true,
-                  "conditionGroup": ""
-                }
-              ]
+              "conditionGroup": ""
             }
           ]
         }
