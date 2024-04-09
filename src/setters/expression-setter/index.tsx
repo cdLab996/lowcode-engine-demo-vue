@@ -1,6 +1,8 @@
-import { isJSExpression } from '@knxcloud/lowcode-utils'
+/**
+ * 扩展官方的 ExpressionSetter 组件
+ */
+import { isJSExpression } from '@alilc/lowcode-utils'
 import AliLowCodeEngineExt from '@cdlab996/lowcode-engine-ext-vue'
-import type { IPublicModelPluginContext } from '@alilc/lowcode-types'
 import { project } from '@alilc/lowcode-engine'
 
 import Logger from '@/utils/Logger'
@@ -72,37 +74,4 @@ const ExpressionSetter = {
   component: ExpressionSetterView,
 }
 
-const setterRegistry = (ctx: IPublicModelPluginContext) => {
-  const { setterMap, pluginMap } = AliLowCodeEngineExt
-  return {
-    name: 'ext-setters-registry',
-    init() {
-      const { setters, skeleton } = ctx
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      setters.registerSetter({ ...setterMap, ExpressionSetter })
-      // 注册插件
-      // 注册事件绑定面板
-      skeleton.add({
-        area: 'centerArea',
-        type: 'Widget',
-        content: pluginMap.EventBindDialog,
-        name: 'eventBindDialog',
-        props: {},
-      })
-
-      // 注册变量绑定面板
-      skeleton.add({
-        area: 'centerArea',
-        type: 'Widget',
-        content: pluginMap.VariableBindDialog,
-        name: 'variableBindDialog',
-        props: {},
-      })
-    },
-  }
-}
-
-setterRegistry.pluginName = 'setterRegistry'
-
-export default setterRegistry
+export default ExpressionSetter

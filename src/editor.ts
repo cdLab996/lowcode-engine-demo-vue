@@ -1,19 +1,7 @@
-import Inject from '@alilc/lowcode-plugin-inject'
-import { init, plugins, project } from '@alilc/lowcode-engine'
-import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo'
-import SchemaPlugin from '@alilc/lowcode-plugin-schema'
-import ManualPlugin from '@cdlab996/lowcode-plugin-manual'
-import DirectiveLoading from '@cdlab996/plugin-directive-loading'
-import DataSource from '@alilc/lowcode-plugin-datasource-pane'
+import { init, project } from '@alilc/lowcode-engine'
 import { setupHostEnvironment } from '@knxcloud/lowcode-utils'
-import SimulatorResizer from '@alilc/lowcode-plugin-simulator-select'
-import CodeEditor from '@knxcloud/lowcode-plugin-vue-code-editor'
-import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop'
 
-import RegistryPlugin from './plugins/registry'
-import InitPlugin from './plugins/init'
-import SetterPlugin from './plugins/setter'
-import Actions from './plugins/actions'
+import registerPlugins from './plugins/registry'
 import './editor.less'
 
 const getUrlParam = (name: string): string | null => {
@@ -38,32 +26,7 @@ void (async () => {
     ],
   })
 
-  /**
-   * More official plugins can be found here
-   *
-   * https://github.com/alibaba/lowcode-plugins
-   */
-  const pluginsList = [
-    Inject,
-    RegistryPlugin,
-    UndoRedoPlugin,
-    SchemaPlugin,
-    DataSource,
-    SetterPlugin,
-    InitPlugin,
-    CodeEditor,
-    Actions,
-    SimulatorResizer,
-    SetRefPropPlugin,
-    DirectiveLoading,
-  ]
-
-  for (const plugin of pluginsList) {
-    await plugins.register(plugin)
-  }
-  await plugins.register(ManualPlugin, {
-    href: 'https://github.com/cdLab996',
-  })
+  await registerPlugins()
 
   const client: string = getUrlParam('client') || 'h5'
   const client2deviceMap: Record<string, string> = {
