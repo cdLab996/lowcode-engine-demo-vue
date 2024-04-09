@@ -25,7 +25,15 @@ const savePlugin = (ctx: IPublicModelPluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: h(Button, { onClick: () => save }, '保存到本地'),
+        content: h(
+          Button,
+          {
+            onClick: () => {
+              save().catch((error) => console.error(error))
+            },
+          },
+          '保存到本地'
+        ),
       })
 
       skeleton.add({
@@ -33,7 +41,15 @@ const savePlugin = (ctx: IPublicModelPluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: h(Button, { onClick: () => preview }, '预览'),
+        content: h(
+          Button,
+          {
+            onClick: () => {
+              preview().catch((error) => console.error(error))
+            },
+          },
+          '预览'
+        ),
       })
 
       hotkey.bind('command+s', async (e) => {
