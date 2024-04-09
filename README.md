@@ -6,7 +6,7 @@ This is a Lowcode Engine demo based on Vue. You can experience the following ver
 - Vue 2.7: [https://lowcode-engine-demo-vue2-7.vercel.app/](https://lowcode-engine-demo-vue2-7.vercel.app/)
 - Vue 2.7 Examples: [https://lowcode-engine-demo-vue2-7-examples.vercel.app/](https://lowcode-engine-demo-vue2-7-examples.vercel.app/)
 
-## Getting Started
+## 🌱 Getting Started
 
 run the development server:
 
@@ -23,7 +23,7 @@ pnpm run dev
 
 Open [http://localhost:5577](http://localhost:5577) with your browser to see the result.
 
-## Usage Considerations
+## 💡 Usage Considerations
 
 When using variables:
 
