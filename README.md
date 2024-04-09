@@ -1,6 +1,8 @@
 # 🚀 Lowcode Engine Vue Demo
 
-This is a Lowcode Engine demo based on Vue. You can experience the following versions online:
+> This is a Lowcode Engine demo based on Vue. You can experience the following versions online:
+>
+> Note: As the Vue 2.7 version is currently not open-source, only URL access is provided.
 
 - Vue 3: [https://lowcode-engine-demo-vue.vercel.app/](https://lowcode-engine-demo-vue.vercel.app/)
 - Vue 2.7: [https://lowcode-engine-demo-vue2-7.vercel.app/](https://lowcode-engine-demo-vue2-7.vercel.app/)
