@@ -1,4 +1,4 @@
 module.exports = {
   ...require('@cdlab996/prettier-config'),
-  semi: true,
-};
+  // Add your custom configurations here
+}

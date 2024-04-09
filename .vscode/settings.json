@@ -1,19 +1,44 @@
 {
-  "editor.formatOnSave": true,
+  // Disable the default formatter, use eslint instead
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
-  },
+  "prettier.enable": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "prettier.enable": true,
-  "eslint.validate": ["vue", "ts", "tsx"],
-  "volar.autoCompleteRefs": false,
-  "volar.codeLens.scriptSetupTools": false,
-  "volar.codeLens.references": false,
-  "volar.completion.autoImportComponent": false,
-  "volar.completion.preferredTagNameCase": "kebab",
-  "stylelint.validate": ["css", "less", "postcss", "vue"]
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+  "stylelint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ]
 }

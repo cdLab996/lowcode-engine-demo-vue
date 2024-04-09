@@ -10,7 +10,7 @@
     "jsx": "preserve",
     "noImplicitThis": true,
     "strict": true,
-    "preserveValueImports": true,
+    // "verbatimModuleSyntax": true,
     "target": "ESNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -20,5 +20,5 @@
     }
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-  "exclude": ["node_modules", "./src/vue/**"]
+  "exclude": ["node_modules"]
 }

@@ -1,12 +1,13 @@
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
-import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
-import { Logo } from '../components/logo/logo';
+import type { IPublicModelPluginContext } from '@alilc/lowcode-types'
+import ComponentsPane from '@alilc/lowcode-plugin-components-pane'
+
+import { Logo } from '../components/logo/logo'
 
 const builtinPluginRegistry = (ctx: IPublicModelPluginContext) => {
   return {
     name: 'builtin-plugin-registry',
-    async init() {
-      const { skeleton, project } = ctx;
+    init() {
+      const { skeleton, project } = ctx
       // 注册 logo 面板
       skeleton.add({
         area: 'topArea',
@@ -20,7 +21,7 @@ const builtinPluginRegistry = (ctx: IPublicModelPluginContext) => {
         props: {
           align: 'left',
         },
-      });
+      })
 
       // 注册组件面板
       const componentsPane = skeleton.add({
@@ -33,15 +34,21 @@ const builtinPluginRegistry = (ctx: IPublicModelPluginContext) => {
           icon: 'zujianku',
           description: '组件库',
         },
-      });
-      componentsPane.disable();
+      })
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      componentsPane?.disable?.()
       project.onSimulatorRendererReady(() => {
-        componentsPane.enable();
-      });
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+        componentsPane?.enable?.()
+      })
     },
-  };
-};
+  }
+}
 
-builtinPluginRegistry.pluginName = 'builtinPluginRegistry';
+builtinPluginRegistry.pluginName = 'builtinPluginRegistry'
 
-export default builtinPluginRegistry;
+export default builtinPluginRegistry
