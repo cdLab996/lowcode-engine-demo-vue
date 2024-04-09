@@ -3,21 +3,22 @@
 
 import { h, createApp, toRaw, Suspense } from 'vue'
 
-import type { Asset, IPublicTypeComponentMap, IPublicTypePackage } from '@alilc/lowcode-types'
+import type { Asset, IPublicTypeComponentMap, IPublicTypeProjectSchema } from '@alilc/lowcode-types'
 import VueRenderer from '@knxcloud/lowcode-vue-renderer'
 import { buildComponents, AssetLoader } from '@knxcloud/lowcode-utils'
 
-import { getPackgesToLocalStorage, getProjectSchemaToLocalStorage } from '../utils/store'
+// import { getPackgesToLocalStorage, getProjectSchemaToLocalStorage } from '../utils/store'
 
 const init = async () => {
-  const packages = getPackgesToLocalStorage()
-  const projectSchema = getProjectSchemaToLocalStorage()
-  const { componentsMap: componentsMapArray = [], componentsTree = [] } =
-    projectSchema || {}
+  // const packages = getPackgesToLocalStorage()
+  // const projectSchema = getProjectSchemaToLocalStorage()
+  const packages = JSON.parse(window.localStorage.getItem('packages') || '[]')
+  const projectSchema = JSON.parse(
+    window.localStorage.getItem('projectSchema') || '{}'
+  ) as IPublicTypeProjectSchema
+  const { componentsMap: componentsMapArray = [], componentsTree = [] } = projectSchema
 
-  const componentsMap: {
-    [key: string]: IPublicTypeComponentMap
-  } = {}
+  const componentsMap: { [key: string]: IPublicTypeComponentMap } = {}
   componentsMapArray.forEach((component) => {
     if (component.componentName) {
       componentsMap[component.componentName] = component
