@@ -3,6 +3,8 @@ import AliLowCodeEngineExt from '@cdlab996/lowcode-engine-ext-vue'
 import type { IPublicModelPluginContext } from '@alilc/lowcode-types'
 import { project } from '@alilc/lowcode-engine'
 
+import Logger from '@/utils/Logger'
+
 const ReactExpressionSetter = AliLowCodeEngineExt.setterMap.ExpressionSetter
 const ReactExpressionSetterView = ReactExpressionSetter.component
 
@@ -50,7 +52,7 @@ class ExpressionSetterView extends ReactExpressionSetterView {
             dataSource.push(...Object.keys(flatted))
           }
         } catch (err) {
-          console.warn('parse error', err)
+          Logger.error('parse error', err)
         }
       }
     }

@@ -3,6 +3,7 @@ import { Button, Message } from '@alifd/next'
 import type { IPublicModelPluginContext } from '@alilc/lowcode-types'
 
 import { saveSchema } from '@/utils/store'
+import Logger from '@/utils/Logger'
 
 const save = async () => {
   await saveSchema()
@@ -29,7 +30,7 @@ const savePlugin = (ctx: IPublicModelPluginContext) => {
           Button,
           {
             onClick: () => {
-              save().catch((error) => console.error(error))
+              save().catch((error) => Logger.error(error))
             },
           },
           '保存到本地'
@@ -45,7 +46,7 @@ const savePlugin = (ctx: IPublicModelPluginContext) => {
           Button,
           {
             onClick: () => {
-              preview().catch((error) => console.error(error))
+              preview().catch((error) => Logger.error(error))
             },
           },
           '预览'
