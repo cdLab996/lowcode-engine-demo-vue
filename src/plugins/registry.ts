@@ -100,7 +100,7 @@ export default async function registerPlugins() {
 
   // 注册 使用手册
   await plugins.register(ManualPlugin, {
-    href: 'https://github.com/cdLab996',
+    href: 'https://github.com/cdLab996/lowcode-engine-demo-vue',
   })
 
   // 画布切换
