@@ -28,6 +28,7 @@
     "@cdlab996/antd-lowcode-materials": "^0.0.1",
     "@cdlab996/element-plus-lowcode-materials": "^0.0.1",
     "@cdlab996/lowcode-plugin-manual": "^1.0.2",
+    "@cdlab996/lowcode-plugin-set-doc-url": "^1.0.1",
     "@cdlab996/plugin-directive-loading": "^1.0.0",
     "@cdlab996/vant-lowcode-materials": "^0.0.1",
     "@knxcloud/lowcode-plugin-vue-code-editor": "0.1.2",

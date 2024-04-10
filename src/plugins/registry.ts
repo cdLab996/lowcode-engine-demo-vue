@@ -17,6 +17,7 @@ import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo'
 import CodeEditor from '@knxcloud/lowcode-plugin-vue-code-editor'
 import ManualPlugin from '@cdlab996/lowcode-plugin-manual'
 import DirectiveLoading from '@cdlab996/plugin-directive-loading'
+import PluginSetDocUrlProp from '@cdlab996/lowcode-plugin-set-doc-url'
 
 // setters
 import SetterPlugin from '../setters/index'
@@ -35,8 +36,8 @@ export default async function registerPlugins() {
   // 高级面板中设置 v-loading 指令
   await plugins.register(DirectiveLoading)
 
-  // TODO: 支持给每个组件注入 docUrl
-  // await plugins.register(RegisterDocProp)
+  // 支持给每个组件注入 docUrl
+  await plugins.register(PluginSetDocUrlProp)
 
   // 加载默认的资产包、schema
   await plugins.register(ResourceInit)

@@ -62,6 +62,7 @@ Code built with the help of these related projects:
 - [@cdlab996/lowcode-plugin-manual](https://github.com/cdlab996/lowcode-plugin-manual) Lowcode Plugin Manual (Due to the official plugins not supporting URL configuration, it has been separated)
 - [@cdlab996/lowcode-engine-ext-vue](https://github.com/cdlab996/lowcode-engine-ext-vue) Adapting Vue Setters
 - [@cdlab996/plugin-directive-loading](https://github.com/cdlab996/plugin-directive-loading) Vue Custom Directive
+- [@cdlab996/lowcode-plugin-set-doc-url](https://github.com/cdLab996/lowcode-engine-plugins/tree/main/packages/plugin-set-doc-url) Lowcode Plugin Component material new documentation address
 - [@cdlab996/antd-lowcode-materials](https://github.com/cdLab996/lowcode-engine-materials-vue/tree/main/packages/ant-design-vue) Ant Design Vue Materials
 - [@cdlab996/element-plus-lowcode-materials](https://github.com/cdLab996/lowcode-engine-materials-vue/tree/main/packages/element-plus) Element Plus Materials
 - [@cdlab996/vant-lowcode-materials](https://github.com/cdLab996/lowcode-engine-materials-vue/tree/main/packages/vant) Vant Materials

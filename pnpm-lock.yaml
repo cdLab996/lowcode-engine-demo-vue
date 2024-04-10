@@ -38,6 +38,9 @@ dependencies:
   '@cdlab996/lowcode-plugin-manual':
     specifier: ^1.0.2
     version: 1.0.2(@alifd/next@1.26.12)(react@16.14.0)
+  '@cdlab996/lowcode-plugin-set-doc-url':
+    specifier: ^1.0.1
+    version: 1.0.1(@alifd/next@1.26.12)(react@16.14.0)
   '@cdlab996/plugin-directive-loading':
     specifier: ^1.0.0
     version: 1.0.0(@alifd/next@1.26.12)(react@16.14.0)
@@ -3572,6 +3575,17 @@ packages:
 
   /@cdlab996/lowcode-plugin-manual@1.0.2(@alifd/next@1.26.12)(react@16.14.0):
     resolution: {integrity: sha512-0JGr9H7gyNHJi2V4YI9DRfcq8jsahI1Z5vCgf1Cv6z+oeFfJDwXlmVEzo5CR7FHcZXrJce/4muY9ylP3/IK2Tg==}
+    peerDependencies:
+      '@alifd/next': '*'
+      react: '>=16'
+    dependencies:
+      '@alifd/next': 1.26.12(@alifd/meet-react@2.9.9)(moment@2.30.1)(react-dom@16.14.0)(react@16.14.0)
+      react: 16.14.0
+    dev: false
+
+  /@cdlab996/lowcode-plugin-set-doc-url@1.0.1(@alifd/next@1.26.12)(react@16.14.0):
+    resolution: {integrity: sha512-K8NNNcsXImOSH8YNMQlR8RFzhWEGrEHM6JAWYQGVt8TDocroAvKLJyoOmKmhCHWePmyYvuLVggNn/5BZGwa0Nw==}
+    engines: {node: '>=18.18.0'}
     peerDependencies:
       '@alifd/next': '*'
       react: '>=16'
