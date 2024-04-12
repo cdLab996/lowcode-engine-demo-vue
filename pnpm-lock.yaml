@@ -74,8 +74,8 @@ devDependencies:
     specifier: 0.0.6-beta.4
     version: 0.0.6-beta.4(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.4)
   '@cdlab996/lowcode-engine-ext-vue':
-    specifier: ^1.0.6-beta.28
-    version: 1.0.6-beta.28(@alifd/meet-react@2.9.9)(@alifd/next@1.26.12)(moment@2.30.1)(monaco-editor@0.46.0)(react-dom@16.14.0)(react@16.14.0)
+    specifier: ^1.0.6-beta.29
+    version: 1.0.6-beta.29(@alifd/meet-react@2.9.9)(@alifd/next@1.26.12)(moment@2.30.1)(monaco-editor@0.46.0)(react-dom@16.14.0)(react@16.14.0)
   '@cdlab996/prettier-config':
     specifier: ^0.0.6-beta.4
     version: 0.0.6-beta.4
@@ -3548,8 +3548,8 @@ packages:
       - supports-color
     dev: true
 
-  /@cdlab996/lowcode-engine-ext-vue@1.0.6-beta.28(@alifd/meet-react@2.9.9)(@alifd/next@1.26.12)(moment@2.30.1)(monaco-editor@0.46.0)(react-dom@16.14.0)(react@16.14.0):
-    resolution: {integrity: sha512-/lsogDNZ9SJD47h3xfMnC8nlGcvCJNgnGcTyG1E41hcZo+9PlvyUF4bV7t6702ILilccxqWjhw4cE1ECNkVpmA==}
+  /@cdlab996/lowcode-engine-ext-vue@1.0.6-beta.29(@alifd/meet-react@2.9.9)(@alifd/next@1.26.12)(moment@2.30.1)(monaco-editor@0.46.0)(react-dom@16.14.0)(react@16.14.0):
+    resolution: {integrity: sha512-cDab5QRdFlGhaKVCAsA9i5uLXS/L/Zs0+7J/ieNKoDK/dCVadgORO4guvhXPI5MVAFq1RbYKm/Mrkcr/PPScPw==}
     peerDependencies:
       '@alifd/next': 1.x
       react: ^16.3.0

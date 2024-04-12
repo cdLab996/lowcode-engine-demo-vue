@@ -41,7 +41,7 @@
     "@alilc/lowcode-engine": "^1.1.7",
     "@babel/core": "^7.21.0",
     "@cdlab996/eslint-config-react": "0.0.6-beta.4",
-    "@cdlab996/lowcode-engine-ext-vue": "^1.0.6-beta.28",
+    "@cdlab996/lowcode-engine-ext-vue": "^1.0.6-beta.29",
     "@cdlab996/prettier-config": "^0.0.6-beta.4",
     "@types/node": "^17.0.45",
     "@types/prop-types": "^15.7.5",
